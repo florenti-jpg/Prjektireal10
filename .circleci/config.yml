@@ -12,7 +12,6 @@ jobs:
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
 
@@ -28,7 +27,7 @@ jobs:
 
       - run: sudo npm i -g @angular/cli > /dev/null
       - run: npm i
-      - run: ng build --prod
+      - run: ng build
 
       - save_cache:
           paths:
